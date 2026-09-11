@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EE911 — Plans d'évacuation et d'intervention conformes, en ligne</title>
+<meta name="description" content="Créez vos plans d'évacuation et plans d'intervention conformes (NF X 08-070, ISO 23601, DIN 14095) dans votre navigateur : import photo intelligent, DXF/DWG, pictogrammes ISO 7010, export PDF. Offre découverte gratuite.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="EE911 — Plans d'évacuation conformes, en ligne">
+<meta property="og:description" content="L'éditeur en ligne des plans d'évacuation et d'intervention. Import photo et DWG, conformité FR/DE/BE, export PDF. Gratuit pour démarrer : 1 site, 5 étages.">
+<meta property="og:url" content="https://www.ee911.eu/">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <path d="M14 2L25 8V20L14 26L3 20V8L14 2Z" stroke="#e8590c" stroke-width="2"/>
+      <path d="M9 14H19M14 9V19" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span>EE911</span>
+  </a>
+  <nav class="topbar__nav">
+    <a href="#fonctionnalites">Fonctionnalités</a>
+    <a href="#conformite">Conformité</a>
+    <a href="#offres">Offres</a>
+    <a class="btn btn--ghost" href="https://map.ee911.eu/login">Se connecter</a>
+    <a class="btn btn--primary" href="https://map.ee911.eu/login?mode=signup">Créer un compte</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero__text">
+    <p class="hero__kicker">Sécurité incendie · Obligation réglementaire</p>
+    <h1>Vos plans d'évacuation, conformes et à jour,<br>sans bureau d'études.</h1>
+    <p class="hero__sub">
+      EE911 est l'éditeur en ligne des plans d'évacuation et des plans
+      d'intervention. Photographiez un plan existant ou importez votre DWG :
+      l'application reconstruit les murs, les portes et les pictogrammes,
+      vous ajustez, vous exportez en PDF prêt à afficher.
+    </p>
+    <form class="hero__cta" action="https://map.ee911.eu/login" method="get">
+      <input type="hidden" name="mode" value="signup">
+      <input class="hero__email" type="email" name="email" required
+             placeholder="votre@email-professionnel.fr" aria-label="Adresse e-mail">
+      <button class="btn btn--primary btn--lg" type="submit">Créer mon compte</button>
+      <span class="hero__offer">Offre découverte : 1 site et 5 étages inclus, sans carte bancaire.</span>
+    </form>
+  </div>
+  <div class="hero__visual" aria-hidden="true">
+    <div class="plancard">
+      <div class="plancard__banner">PLAN D'ÉVACUATION</div>
+      <div class="plancard__body">
+        <div class="plancard__floor">
+          <span class="pc-wall pc-wall--h" style="top:12%;left:8%;width:84%"></span>
+          <span class="pc-wall pc-wall--h" style="top:88%;left:8%;width:84%"></span>
+          <span class="pc-wall pc-wall--v" style="top:12%;left:8%;height:76%"></span>
+          <span class="pc-wall pc-wall--v" style="top:12%;left:92%;height:76%"></span>
+          <span class="pc-wall pc-wall--v" style="top:12%;left:46%;height:36%"></span>
+          <span class="pc-wall pc-wall--h" style="top:60%;left:30%;width:40%"></span>
+          <span class="pc-path" style="top:70%;left:20%;width:46%"></span>
+          <span class="pc-picto pc-picto--exit" style="top:80%;left:70%">EXIT</span>
+          <span class="pc-picto pc-picto--ext" style="top:22%;left:14%"></span>
+          <span class="pc-picto pc-picto--ext" style="top:22%;left:76%"></span>
+          <span class="pc-here" style="top:66%;left:14%"></span>
+        </div>
+        <div class="plancard__legend">
+          <span><i class="dot dot--red"></i> Extincteurs</span>
+          <span><i class="dot dot--green"></i> Issues de secours</span>
+          <span><i class="dot dot--blue"></i> Vous êtes ici</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div><strong>NF X 08-070</strong> · <strong>ISO 23601</strong> · <strong>DIN 14095</strong></div>
+  <div>Plans d'évacuation <strong>et</strong> plans d'intervention</div>
+  <div>France · Allemagne · Belgique</div>
+</section>
+
+<section id="fonctionnalites" class="features">
+  <h2>Tout ce qu'un plan réglementaire exige, rien de superflu</h2>
+  <div class="features__grid">
+    <article>
+      <h3>📷 Import photo intelligent</h3>
+      <p>Photographiez le plan affiché dans votre bâtiment : l'analyse mesure
+      les traits au pixel, reconstruit les murs et cloisons, détecte les portes
+      et repère les pictogrammes existants. Vous obtenez un plan éditable,
+      pas une image figée.</p>
+    </article>
+    <article>
+      <h3>📐 Import DXF / DWG</h3>
+      <p>Partez du plan de l'architecte : les calques utiles sont convertis en
+      objets de l'éditeur, à l'échelle. Les gros fichiers sont pris en charge.</p>
+    </article>
+    <article>
+      <h3>🧰 Éditeur métier</h3>
+      <p>Murs, portes, escaliers, cheminements d'évacuation, zones et
+      compartiments, point « Vous êtes ici » : chaque objet est métier,
+      duplicable et modifiable. Pictogrammes ISO 7010 intégrés.</p>
+    </article>
+    <article>
+      <h3>🗂️ Templates par typologie</h3>
+      <p>Tour de bureaux, commerce, hôtel, site multi-zones, grand ERP, plan
+      d'intervention : chaque template pré-remplit le cartouche, la légende et
+      les réglages typiques — y compris les consignes particulières (hôtellerie).</p>
+    </article>
+    <article>
+      <h3>🚒 Plans d'intervention</h3>
+      <p>Le document destiné aux secours : SSI, coupures, vannes, accès
+      pompiers, chargés d'intervention — avec sa mise en page dédiée,
+      distincte du plan d'évacuation.</p>
+    </article>
+    <article>
+      <h3>🏢 Multi-sites, multi-étages</h3>
+      <p>Organisez sociétés, sites, bâtiments et étages ; composez un plan
+      multi-emprises regroupant plusieurs niveaux sur une page. Invitez votre
+      équipe avec des rôles (admin, éditeur, lecteur).</p>
+    </article>
+    <article>
+      <h3>📄 Export prêt à afficher</h3>
+      <p>PDF et PNG au format A3/A4, portrait ou paysage, avec cartouche
+      réglementaire complet : consignes, point de rassemblement, légende,
+      échelle, dates de conception et de mise à jour, coordonnées GPS.</p>
+    </article>
+    <article>
+      <h3>🔒 Sécurité</h3>
+      <p>Double authentification (TOTP) pour tous les comptes, données
+      hébergées en Europe, aucun traceur tiers sur ce site.</p>
+    </article>
+  </div>
+</section>
+
+<section class="how">
+  <h2>De la photo au plan affiché, en quatre étapes</h2>
+  <ol class="how__steps">
+    <li><strong>Créez votre compte</strong><span>Gratuit, avec votre e-mail professionnel.</span></li>
+    <li><strong>Décrivez votre site</strong><span>Société, bâtiment, étages — le cartouche s'en déduit.</span></li>
+    <li><strong>Importez ou dessinez</strong><span>Photo du plan existant, DWG, ou dessin direct dans l'éditeur.</span></li>
+    <li><strong>Exportez et affichez</strong><span>PDF conforme, à mettre à jour en deux clics à chaque changement.</span></li>
+  </ol>
+</section>
+
+<section id="conformite" class="conformity">
+  <h2>Conçu à partir des normes, pays par pays</h2>
+  <p class="conformity__intro">Les textes changent selon le pays du bâtiment :
+  EE911 adapte le cartouche, les mentions obligatoires, les consignes et la
+  langue du plan.</p>
+  <div class="conformity__grid">
+    <article>
+      <h3>🇫🇷 France</h3>
+      <p>Code du travail (art. R4227-39), NF X 08-070 pour les plans schématiques,
+      MS 41 pour les plans d'intervention en ERP. Consignes incendie, numéros
+      d'urgence 18 · 112, point de rassemblement, espaces d'attente sécurisés.</p>
+    </article>
+    <article>
+      <h3>🇩🇪 Allemagne</h3>
+      <p>Flucht- und Rettungsplan selon ASR A2.3 et DIN ISO 23601 ;
+      Feuerwehrplan selon DIN 14095. Textes du plan en allemand, Notruf 112.</p>
+    </article>
+    <article>
+      <h3>🇧🇪 Belgique</h3>
+      <p>Arrêté royal du 7 juillet 1994 (normes de base), plans bilingues
+      français / néerlandais, numéros 112 · 100.</p>
+    </article>
+  </div>
+  <p class="conformity__note">La responsabilité de l'affichage et de la mise à
+  jour des plans incombe à l'exploitant ; EE911 fournit l'outil et les gabarits
+  conformes, pas une prestation de bureau de contrôle.</p>
+</section>
+
+<section id="offres" class="pricing">
+  <h2>Des offres simples</h2>
+  <div class="pricing__grid">
+    <article class="price-card">
+      <h3>Découverte</h3>
+      <p class="price-card__price">0 €</p>
+      <ul>
+        <li>1 site, 5 étages</li>
+        <li>Toutes les fonctionnalités de l'éditeur</li>
+        <li>Import photo et DXF/DWG</li>
+        <li>Plans d'évacuation et d'intervention</li>
+        <li>Export PDF / PNG</li>
+        <li>Membres illimités sur votre organisation</li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="https://map.ee911.eu/login?mode=signup">Créer un compte</a>
+    </article>
+    <article class="price-card price-card--pro">
+      <h3>Entreprise</h3>
+      <p class="price-card__price">Sur devis</p>
+      <ul>
+        <li>Sites et étages illimités</li>
+        <li>Multi-sociétés</li>
+        <li>Accompagnement à la reprise de l'existant</li>
+        <li>Support prioritaire</li>
+      </ul>
+      <a class="btn btn--ghost btn--block" href="mailto:contact@ee911.eu?subject=EE911%20—%20Offre%20Entreprise">Nous contacter</a>
+    </article>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2>Votre prochain plan d'évacuation est à cinq minutes.</h2>
+  <a class="btn btn--primary btn--lg" href="https://map.ee911.eu/login?mode=signup">Commencer gratuitement</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <path d="M14 2L25 8V20L14 26L3 20V8L14 2Z" stroke="#e8590c" stroke-width="2"/>
+      <path d="M9 14H19M14 9V19" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    © 2026 EE911 — Tous droits réservés
+  </div>
+  <nav>
+    <a href="https://map.ee911.eu/login">Application</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="mailto:contact@ee911.eu">contact@ee911.eu</a>
+  </nav>
+</footer>
+
+</body>
+</html>
