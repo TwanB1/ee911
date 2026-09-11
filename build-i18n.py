@@ -289,6 +289,9 @@ def build(lang: str, src: str) -> str:
     out = out.replace('href="mentions-legales.html"', 'href="../mentions-legales.html"')
     out = out.replace('content="https://www.ee911.eu/"',
                       f'content="https://www.ee911.eu/{lang}/"')
+    # La langue est transmise à l'application (map.ee911.eu/login?lang=…)
+    out = out.replace('lang=fr', f'lang={lang}')
+    out = out.replace('name="lang" value="fr"', f'name="lang" value="{lang}"')
     # Traductions, plus longues d'abord (évite les collisions de sous-chaînes)
     for fr in sorted(TR, key=len, reverse=True):
         target = TR[fr][IDX[lang]]
