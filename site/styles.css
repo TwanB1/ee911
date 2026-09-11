@@ -66,6 +66,17 @@ section > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
 }
 .topbar__nav > a:not(.btn):hover { color: #fff; }
 .topbar .btn--ghost { color: #fff; }
+.lang-switch { display: inline-flex; gap: 2px; }
+.lang-switch a {
+  color: #8b94a3; text-decoration: none; font-size: .8rem; font-weight: 700;
+  padding: 3px 6px; border-radius: 4px;
+}
+.lang-switch a:hover { color: #fff; }
+html[lang="fr"] .lang-switch a[data-lang="fr"],
+html[lang="en"] .lang-switch a[data-lang="en"],
+html[lang="de"] .lang-switch a[data-lang="de"],
+html[lang="nl"] .lang-switch a[data-lang="nl"],
+html[lang="it"] .lang-switch a[data-lang="it"] { color: #fff; background: #2a3244; }
 
 /* ---- Hero ---- */
 .hero {
@@ -163,20 +174,15 @@ section > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
   color: var(--muted); font-size: .85rem; max-width: 720px;
 }
 
-/* ---- Offres ---- */
-.pricing { background: var(--bg-soft); }
-.pricing__grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 340px));
-  gap: 26px; justify-content: center;
+/* ---- Modèle simple ---- */
+.offer-simple { background: var(--bg-soft); text-align: center; }
+.offer-simple__text { max-width: 640px; font-size: 1.1rem; }
+.offer-simple__more { max-width: 640px; color: var(--muted); }
+.offer-simple__cta {
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+  margin-top: 26px;
 }
-.price-card {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 26px;
-}
-.price-card--pro { border-color: var(--navy); border-width: 2px; }
-.price-card__price { font-size: 2rem; font-weight: 800; margin: 0 0 12px; }
-.price-card ul { padding: 0 0 0 18px; margin: 0 0 20px; color: var(--muted); }
-.price-card li { margin-bottom: 6px; }
+.offer-simple .btn--ghost { color: var(--ink); }
 
 /* ---- CTA final ---- */
 .cta-final {
