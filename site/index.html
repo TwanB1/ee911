@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:title" content="EE911 — Plans d'évacuation conformes, en ligne">
-<meta property="og:description" content="L'éditeur en ligne des plans d'évacuation et d'intervention. Import photo et DWG, conformité FR/DE/BE, export PDF. Gratuit pour démarrer : 1 site, 5 étages.">
+<meta property="og:description" content="L'éditeur en ligne des plans d'évacuation et d'intervention. Import photo et DWG, socle ISO 23601 adapté pays par pays, export PDF. Gratuit pour démarrer : 1 site, 5 étages.">
 <meta property="og:url" content="https://www.ee911.eu/">
 <meta property="og:type" content="website">
 </head>
@@ -53,35 +53,141 @@
   </div>
   <div class="hero__visual" aria-hidden="true">
     <div class="plancard">
-      <div class="plancard__banner">PLAN D'ÉVACUATION</div>
-      <div class="plancard__body">
-        <div class="plancard__floor">
-          <span class="pc-wall pc-wall--h" style="top:12%;left:8%;width:84%"></span>
-          <span class="pc-wall pc-wall--h" style="top:88%;left:8%;width:84%"></span>
-          <span class="pc-wall pc-wall--v" style="top:12%;left:8%;height:76%"></span>
-          <span class="pc-wall pc-wall--v" style="top:12%;left:92%;height:76%"></span>
-          <span class="pc-wall pc-wall--v" style="top:12%;left:46%;height:36%"></span>
-          <span class="pc-wall pc-wall--h" style="top:60%;left:30%;width:40%"></span>
-          <span class="pc-path" style="top:70%;left:20%;width:46%"></span>
-          <span class="pc-picto pc-picto--exit" style="top:80%;left:70%">EXIT</span>
-          <span class="pc-picto pc-picto--ext" style="top:22%;left:14%"></span>
-          <span class="pc-picto pc-picto--ext" style="top:22%;left:76%"></span>
-          <span class="pc-here" style="top:66%;left:14%"></span>
-        </div>
-        <div class="plancard__legend">
-          <span><i class="dot dot--red"></i> Extincteurs</span>
-          <span><i class="dot dot--green"></i> Issues de secours</span>
-          <span><i class="dot dot--blue"></i> Vous êtes ici</span>
-        </div>
-      </div>
+      <svg viewBox="0 0 460 330" font-family="system-ui, sans-serif">
+        <defs>
+          <marker id="arr" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0L8 4L0 8Z" fill="#1a7a3c"/>
+          </marker>
+          <!-- Picto « issue de secours » (homme qui court vers la porte) -->
+          <g id="p-exit">
+            <rect width="22" height="22" rx="2.5" fill="#1a7a3c"/>
+            <rect x="14.5" y="4" width="4.5" height="14" fill="#fff"/>
+            <circle cx="8.2" cy="6.4" r="2.1" fill="#fff"/>
+            <path d="M5 12.6l3.2-3 3 1.8M8.2 9.6l-.6 4 2.6 3M7.6 13.4l-2.6 4.4" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </g>
+          <!-- Extincteur -->
+          <g id="p-ext">
+            <rect width="22" height="22" rx="2.5" fill="#c8102e"/>
+            <rect x="8.5" y="7" width="5.5" height="10.5" rx="2" fill="#fff"/>
+            <rect x="10" y="4.5" width="2.5" height="2.5" fill="#fff"/>
+            <path d="M12.8 5.6l4-1.6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+          <!-- Alarme (déclencheur manuel) -->
+          <g id="p-alarm">
+            <rect width="22" height="22" rx="2.5" fill="#c8102e"/>
+            <rect x="5.5" y="5.5" width="11" height="11" rx="1.2" fill="none" stroke="#fff" stroke-width="1.6"/>
+            <circle cx="11" cy="11" r="2.4" fill="#fff"/>
+          </g>
+          <!-- Premiers secours -->
+          <g id="p-aid">
+            <rect width="22" height="22" rx="2.5" fill="#1a7a3c"/>
+            <path d="M11 5v12M5 11h12" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+          </g>
+          <!-- Point de rassemblement (4 flèches vers le centre) -->
+          <g id="p-assembly">
+            <rect width="22" height="22" rx="2.5" fill="#1a7a3c"/>
+            <path d="M4 4l4.2 4.2M18 4l-4.2 4.2M4 18l4.2-4.2M18 18l-4.2-4.2" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M8.9 5.5v3.4H5.5M13.1 5.5v3.4h3.4M8.9 16.5v-3.4H5.5M13.1 16.5v-3.4h3.4" stroke="#fff" stroke-width="1.3" fill="none"/>
+          </g>
+          <!-- Vous êtes ici -->
+          <g id="p-here">
+            <circle cx="11" cy="11" r="8.5" fill="#1a5fb4"/>
+            <circle cx="11" cy="11" r="8.5" fill="none" stroke="#1a5fb4" stroke-opacity=".28" stroke-width="5"/>
+            <circle cx="11" cy="11" r="3" fill="#fff"/>
+          </g>
+        </defs>
+
+        <!-- Bandeau titre -->
+        <rect x="0" y="0" width="460" height="34" fill="#2f7d5c"/>
+        <text x="14" y="22" fill="#fff" font-size="13" font-weight="800" letter-spacing="2">PLAN D'ÉVACUATION</text>
+        <text x="446" y="22" fill="#dff0e8" font-size="9" text-anchor="end">Niveau 1 · Éch. 1:200</text>
+
+        <!-- Fond -->
+        <rect x="0" y="34" width="460" height="296" fill="#ffffff"/>
+
+        <!-- Emprise du plan -->
+        <g>
+          <!-- Murs porteurs -->
+          <rect x="16" y="50" width="304" height="216" fill="#fdfdfb" stroke="#252b36" stroke-width="5"/>
+          <!-- Cloisons -->
+          <g stroke="#3a4150" stroke-width="2.2">
+            <line x1="118" y1="52" x2="118" y2="140"/>
+            <line x1="118" y1="140" x2="16" y2="140"/>
+            <line x1="210" y1="52" x2="210" y2="118"/>
+            <line x1="210" y1="118" x2="318" y2="118"/>
+            <line x1="16" y1="200" x2="96" y2="200"/>
+            <line x1="96" y1="200" x2="96" y2="264"/>
+            <line x1="238" y1="180" x2="318" y2="180"/>
+            <line x1="238" y1="180" x2="238" y2="264"/>
+          </g>
+          <!-- Portes (interruptions + battant) -->
+          <g stroke="#252b36" stroke-width="1.4" fill="none">
+            <path d="M118 96a18 18 0 0 1 18 18" /><line x1="118" y1="96" x2="118" y2="114"/>
+            <path d="M258 118a17 17 0 0 1 17 17"/><line x1="258" y1="118" x2="258" y2="135"/>
+            <path d="M60 200a16 16 0 0 1 16 16"/><line x1="60" y1="200" x2="60" y2="216"/>
+          </g>
+          <!-- Issue principale (coupure du mur bas) -->
+          <rect x="152" y="261" width="34" height="10" fill="#fff"/>
+          <rect x="150" y="263" width="38" height="7" fill="#1a7a3c" opacity=".16"/>
+
+          <!-- Cheminements d'évacuation -->
+          <g stroke="#1a7a3c" stroke-width="2.6" stroke-dasharray="7 5" fill="none">
+            <path d="M62 120v104" marker-end="url(#arr)"/>
+            <path d="M62 236h100" />
+            <path d="M262 150v76" marker-end="url(#arr)"/>
+            <path d="M262 240h-88" />
+            <path d="M169 236v28" marker-end="url(#arr)"/>
+          </g>
+
+          <!-- Pictos posés sur le plan -->
+          <use href="#p-ext"      x="26"  y="58"/>
+          <use href="#p-ext"      x="284" y="58"/>
+          <use href="#p-ext"      x="284" y="234"/>
+          <use href="#p-alarm"    x="128" y="58"/>
+          <use href="#p-aid"      x="26"  y="234"/>
+          <use href="#p-exit"     x="158" y="238"/>
+          <use href="#p-here"     x="40"  y="98"/>
+          <use href="#p-assembly" x="162" y="292"/>
+          <text x="192" y="308" font-size="9" fill="#1a7a3c" font-weight="700">POINT DE RASSEMBLEMENT</text>
+        </g>
+
+        <!-- Légende -->
+        <g font-size="9.5" fill="#3c4454">
+          <rect x="332" y="50" width="116" height="216" fill="#f7f8f9" stroke="#e3e6ea"/>
+          <text x="342" y="68" font-weight="800" font-size="10" fill="#1c2333" letter-spacing="1">LÉGENDE</text>
+          <g transform="translate(342,78) scale(.82)"><use href="#p-exit"/></g>
+          <text x="366" y="91">Issue de secours</text>
+          <g transform="translate(342,102) scale(.82)"><use href="#p-ext"/></g>
+          <text x="366" y="115">Extincteur</text>
+          <g transform="translate(342,126) scale(.82)"><use href="#p-alarm"/></g>
+          <text x="366" y="139">Alarme incendie</text>
+          <g transform="translate(342,150) scale(.82)"><use href="#p-aid"/></g>
+          <text x="366" y="163">Premiers secours</text>
+          <g transform="translate(342,174) scale(.82)"><use href="#p-assembly"/></g>
+          <text x="366" y="187">Rassemblement</text>
+          <g transform="translate(342,198) scale(.82)"><use href="#p-here"/></g>
+          <text x="366" y="211">Vous êtes ici</text>
+          <line x1="342" y1="222" x2="438" y2="222" stroke="#e3e6ea"/>
+          <line x1="342" y1="234" x2="362" y2="234" stroke="#1a7a3c" stroke-width="2.4" stroke-dasharray="6 4"/>
+          <text x="366" y="237">Cheminement</text>
+          <text x="342" y="256" font-size="8" fill="#8a93a2">Conforme NF X 08-070</text>
+        </g>
+
+        <!-- Cartouche bas -->
+        <g font-size="8.5" fill="#66707f">
+          <line x1="16" y1="278" x2="448" y2="278" stroke="#e3e6ea"/>
+          <text x="16" y="292">Réf. EVA-N1-01 · Mise à jour : 09/2026</text>
+          <text x="16" y="304">Urgences : 18 · 112</text>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
 
 <section class="strip">
-  <div><strong>NF X 08-070</strong> · <strong>ISO 23601</strong> · <strong>DIN 14095</strong></div>
+  <div>Socle <strong>ISO 23601</strong> — la norme internationale des plans d'évacuation</div>
   <div>Plans d'évacuation <strong>et</strong> plans d'intervention</div>
-  <div>France · Allemagne · Belgique</div>
+  <div><strong>NF X 08-070</strong> · <strong>ASR A2.3 / DIN 14095</strong> · adaptations par pays</div>
 </section>
 
 <section id="fonctionnalites" class="features">
@@ -149,9 +255,10 @@
 
 <section id="conformite" class="conformity">
   <h2>Conçu à partir des normes, pays par pays</h2>
-  <p class="conformity__intro">Les textes changent selon le pays du bâtiment :
-  EE911 adapte le cartouche, les mentions obligatoires, les consignes et la
-  langue du plan.</p>
+  <p class="conformity__intro">Le socle commun est l'ISO 23601, la norme
+  internationale des plans d'évacuation. Par-dessus, EE911 adapte le
+  cartouche, les mentions obligatoires, les consignes, les numéros d'urgence
+  et la langue du plan au pays du bâtiment.</p>
   <div class="conformity__grid">
     <article>
       <h3>🇫🇷 France</h3>
@@ -168,6 +275,13 @@
       <h3>🇧🇪 Belgique</h3>
       <p>Arrêté royal du 7 juillet 1994 (normes de base), plans bilingues
       français / néerlandais, numéros 112 · 100.</p>
+    </article>
+    <article>
+      <h3>🇪🇺 Et au-delà</h3>
+      <p>L'ISO 23601 et les pictogrammes ISO 7010 sont reconnus dans toute
+      l'Europe : Suisse, Luxembourg et les autres pays s'appuient sur le même
+      socle. Un pays vous manque dans la liste ? Il s'ajoute sur simple
+      demande, avec ses mentions et sa langue.</p>
     </article>
   </div>
   <p class="conformity__note">La responsabilité de l'affichage et de la mise à

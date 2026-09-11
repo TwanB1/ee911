@@ -95,51 +95,16 @@ section > * { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
 .hero__offer { flex-basis: 100%; color: #9aa3b1; font-size: .9rem; }
 .hero__visual { justify-self: start; }
 
-/* Vignette « plan » stylisée */
+/* Vignette « plan d'évacuation » (SVG inline dans index.html) */
 .plancard {
-  width: min(420px, 90vw);
-  background: #fff; color: var(--ink);
+  width: min(480px, 92vw);
+  background: #fff;
   border-radius: var(--radius);
   box-shadow: 0 18px 50px rgba(0,0,0,.45);
   overflow: hidden;
   transform: rotate(1.5deg);
 }
-.plancard__banner {
-  background: #2f7d5c; color: #fff;
-  font-weight: 800; letter-spacing: .12em; font-size: .85rem;
-  padding: 10px 14px;
-}
-.plancard__body { padding: 14px; }
-.plancard__floor {
-  position: relative; height: 210px;
-  background: #fdfdfc; border: 1px solid var(--line); border-radius: 6px;
-}
-.pc-wall { position: absolute; background: #2a2f3a; }
-.pc-wall--h { height: 4px; }
-.pc-wall--v { width: 4px; }
-.pc-path {
-  position: absolute; height: 0;
-  border-top: 3px dashed #1a7a3c;
-}
-.pc-picto {
-  position: absolute; width: 26px; height: 18px;
-  border-radius: 3px; font-size: 8px; font-weight: 800; color: #fff;
-  display: flex; align-items: center; justify-content: center;
-}
-.pc-picto--exit { background: #1a7a3c; }
-.pc-picto--ext { background: #c8102e; width: 16px; height: 16px; border-radius: 3px; }
-.pc-here {
-  position: absolute; width: 14px; height: 14px; border-radius: 50%;
-  background: #1a5fb4; box-shadow: 0 0 0 4px rgba(26,95,180,.25);
-}
-.plancard__legend {
-  display: flex; gap: 14px; flex-wrap: wrap;
-  margin-top: 10px; font-size: .78rem; color: var(--muted);
-}
-.dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; }
-.dot--red { background: #c8102e; }
-.dot--green { background: #1a7a3c; }
-.dot--blue { background: #1a5fb4; }
+.plancard svg { display: block; width: 100%; height: auto; }
 
 /* ---- Bandeau normes ---- */
 .strip {
