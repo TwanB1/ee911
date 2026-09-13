@@ -63,11 +63,11 @@ TR = {
   "votre@email-professionnel.fr": ("your@work-email.com", "ihre@firmen-mail.de", "uw@zakelijke-mail.nl", "vostra@email-aziendale.it"),
   "Adresse e-mail": ("Email address", "E-Mail-Adresse", "E-mailadres", "Indirizzo e-mail"),
   "Créer mon compte": ("Create my account", "Mein Konto erstellen", "Mijn account aanmaken", "Crea il mio account"),
-  "Offre découverte : 1 site et 5 étages inclus, sans carte bancaire.": (
-    "Starter offer: 1 site and 5 floors included, no credit card required.",
-    "Einstiegsangebot: 1 Standort und 5 Etagen inklusive, ohne Kreditkarte.",
-    "Kennismakingsaanbod: 1 locatie en 5 verdiepingen inbegrepen, zonder creditcard.",
-    "Offerta di prova: 1 sito e 5 piani inclusi, senza carta di credito."),
+  "Offre découverte : 1 site et 5 étages inclus.": (
+    "Starter offer: 1 site and 5 floors included.",
+    "Einstiegsangebot: 1 Standort und 5 Etagen inklusive.",
+    "Kennismakingsaanbod: 1 locatie en 5 verdiepingen inbegrepen.",
+    "Offerta di prova: 1 sito e 5 piani inclusi."),
   # ---- vignette SVG ----
   "PLAN D'ÉVACUATION": ("EVACUATION PLAN", "FLUCHT- UND RETTUNGSPLAN", "ONTRUIMINGSPLAN", "PIANO DI EVACUAZIONE"),
   "Bâtiment A · Niveau 1 · Éch. 1:200": (
